@@ -23,9 +23,9 @@ provider = "aws" {
 module "arch_ec2_asg_elb" {
     source = "git::https://github.com/sfell77/arch_ec2_asg_elb"
     app_name                = var.app_name                      # Your app name; use [a-zA-Z0-9_-] for best results
-    aws_region              = var.aws_region                    # The region you're deploying to
+    aws_region              = var.aws_region                    # The AWS region you're deploying to.  For example, us-east-1
     ami_id                  = var.ami_id                        # The ID of the AMI you're using
-    deploy_env              = var.deploy_env                    # The environment (dev/qa/prod) you're deploying to
+    deploy_env              = var.deploy_env                    # The environment (dev/qa/prod/...) you're deploying to
     asg_max_size            = var.asg_max_size                  # Max number of instances in your autoscaling group
     asg_min_size            = var.asg_min_size                  # Min number of instances in your autoscaling group
     asg_desired_size        = var.asg_desired_size              # The desired (BAU) number of instances in your autoscaling group

@@ -19,7 +19,7 @@ var "ami_id" {
 }
 
 var "aws_region" {
-    description = "Use the AWS provided region.  For example, us-east-1"
+    description = "The AWS region you're deploying to.  For example, us-east-1"
     default = ""
 }
 
