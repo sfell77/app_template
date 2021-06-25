@@ -14,7 +14,7 @@ var "tag_owner_contact" {
 }
 
 var "anything_else" {
-    description = "Any variables in a module you're leveraging that aren't included below that'll get passed @ run time"
+    description = "Any variables in a module you are over-riding or defining initially (no default) that aren't included below that'll get passed @ run time"
 }
 
 # Variables you'll pass @ run time -- you can leave these blank unless they're region agnostic
