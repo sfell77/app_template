@@ -18,7 +18,7 @@ provider = "aws" {
     version = "~> 3.37"
 }
 
-# This is an example of how to leverage blueprints; all of the required fields can be found in the remote repo in the README.  In the below case, I want to deploy my app into elastic compute cloud (EC2) instances managed by an autoscaling group (ASG) with an elastic load balancer (ELB) as an entry point/traffic manager.
+# This is an example of how to leverage blueprints; all of the required fields can be found in the remote repo in the variable.tf file.  In the below case, I want to deploy my app into elastic compute cloud (EC2) instances managed by an autoscaling group (ASG) with an elastic load balancer (ELB) as an entry point/traffic manager.
 
 module "arch_ec2_asg_elb" {
     source = "git::https://github.com/sfell77/arch_ec2_asg_elb"
