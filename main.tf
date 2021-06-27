@@ -24,7 +24,7 @@ provider "aws" {
     region = var.aws_region
 }
 
-# This is an example of how to leverage blueprints (modules); all of the required fields for the module can be found in the module repo in the variable.tf file.  In the below case, I want to deploy my app into elastic compute cloud (EC2) instances managed by an autoscaling group (ASG) with an elastic load balancer (ELB) as an entry point/traffic manager.
+# This is an example of how to leverage blueprints (modules); all of the required fields for the module can be found in the module repo in the variables.tf file.  In the below case, I want to deploy my app into elastic compute cloud (EC2) instances managed by an autoscaling group (ASG) with an elastic load balancer (ELB) as an entry point/traffic manager.
 
 module "arch_ec2_asg_elb" {
     source = "git::https://github.com/sfell77/arch_ec2_asg_elb"
@@ -44,7 +44,7 @@ module "arch_ec2_asg_elb" {
     security_groups         = var.security_groups               # These should be created/exported from your app configuration
 }
 
-# If there are variables from the module's variables.tf file that have a default value that I want to use, I don't need to include them here.  The values above are only for over-riding set values or providing initial values.  For example, `asg_min_size` has a default value of 1 in the module's variables.tf file.  If that's the same value I want, I don't need to include it above.
+# If there are variables from the module's variables.tf file that have a default value that I want to use, I don't need to include them here.  The values above are only for over-riding set values or providing initial values.  For example, `asg_min_size` has a default value of 1 in the module's variables.tf file.  If that's the same value I want, I don't need to include it above.  This also allows you to use maps/lookups to set variables based on other settings in your deployment.
 
 module "some_other_blueprint" {
     source = "..."
