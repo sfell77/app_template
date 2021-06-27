@@ -8,7 +8,7 @@ var "app_name" {
     default = "your-app-name-here"
 }
 
-var "tag_owner_contact" {
+var "owner_contact" {
     description = "Email address/idnetifier of the TEAM responsible for this app"
     default = "owner-contact-info-here"
 }
@@ -24,10 +24,6 @@ var "aws_region" {
 
 var "deploy_env" {
     description = "Denotes dev/qa/prod regions (or whatever values you use); needed for map variables"
-}
-
-var "s3_bucket_name" {
-    description = "We save statefiles to S3 so that they're in a centralized location that's not your laptop. Remember to create buckets PER REGION or you may not have access to your statefiles in the event of a regional outage"
 }
 
 var "tag_deployment_owner" {

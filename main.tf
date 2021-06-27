@@ -14,8 +14,14 @@ App-specific fields (which need to be provided per app) are available at the top
 module -- copy these values to your app template and provide the desired values.
 */
 
-provider = "aws" {
-    version = "~> 3.37"
+terraform {
+    required_providers {
+        aws = "~> 3.37"
+    }
+}
+
+provider "aws" {
+    region = var.aws_region
 }
 
 # This is an example of how to leverage blueprints (modules); all of the required fields for the module can be found in the module repo in the variable.tf file.  In the below case, I want to deploy my app into elastic compute cloud (EC2) instances managed by an autoscaling group (ASG) with an elastic load balancer (ELB) as an entry point/traffic manager.
