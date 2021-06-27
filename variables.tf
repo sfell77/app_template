@@ -17,7 +17,7 @@ var "anything_else" {
     description = "Any variables in a module you are over-riding or defining initially (no default) that aren't included below that'll get passed @ run time"
 }
 
-# Variables you'll pass @ run time -- you can leave these blank unless they're region agnostic
+# Variables you'll pass @ buildtime -- you can leave these blank unless they're region agnostic
 var "aws_region" {
     description = "The AWS region you're deploying to.  For example, us-east-1"
 }
