@@ -26,6 +26,6 @@ var "deploy_env" {
     description = "Denotes dev/qa/prod regions (or whatever values you use); needed for map variables"
 }
 
-var "tag_deployment_owner" {
+var "deployment_owner" {
     description = "Email address/identifier of the PERSON deploying this app"
 }
